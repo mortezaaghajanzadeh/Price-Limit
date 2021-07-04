@@ -1,0 +1,32 @@
+\lr{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{8}{c}}
+\hline\hline
+            &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c}{(6)}&\multicolumn{1}{c}{(7)}&\multicolumn{1}{c}{(8)}\\
+            &\multicolumn{1}{c}{closetoopen}&\multicolumn{1}{c}{opentoclose}&\multicolumn{1}{c}{ret\_1}&\multicolumn{1}{c}{ret\_2}&\multicolumn{1}{c}{ret\_2to5}&\multicolumn{1}{c}{ret\_5to50}&\multicolumn{1}{c}{ret\_50to100}&\multicolumn{1}{c}{ret\_100to300}\\
+\hline
+upperhit    &       3.487\sym{***}&      -1.139\sym{***}&       4.823\sym{***}&       7.806\sym{***}&       5.625\sym{***}&       11.02         &      -53.13         &      1806.9         \\
+            &     (12.83)         &    (-22.84)         &      (6.00)         &      (8.55)         &      (6.21)         &      (0.71)         &     (-0.74)         &      (1.03)         \\
+[1em]
+upper       &       1.595\sym{***}&      -0.820\sym{***}&       2.068\sym{***}&       3.142\sym{***}&       2.145\sym{***}&      -2.541         &      -49.55         &     -1503.6         \\
+            &      (7.07)         &    (-19.30)         &      (5.25)         &      (7.30)         &      (4.65)         &     (-0.19)         &     (-0.82)         &     (-0.98)         \\
+[1em]
+middle      &      -1.327\sym{***}&      -0.341\sym{***}&       0.962\sym{*}  &       2.120\sym{***}&       2.196\sym{***}&       49.85         &       229.5         &       244.0         \\
+            &     (-4.97)         &     (-7.40)         &      (2.07)         &      (4.09)         &      (4.19)         &      (1.03)         &      (1.02)         &      (0.73)         \\
+[1em]
+lower       &      -1.115\sym{***}&     -0.0994\sym{**} &      -0.659\sym{**} &       0.625         &       4.211\sym{***}&       18.94         &       56.53         &       151.2         \\
+            &     (-5.18)         &     (-3.05)         &     (-2.70)         &      (1.61)         &      (5.82)         &      (1.74)         &      (1.16)         &      (0.73)         \\
+[1em]
+lowerhit    &      -2.924\sym{***}&       0.488\sym{***}&      -3.181\sym{***}&      -3.064\sym{***}&       3.478\sym{***}&       31.58\sym{***}&       14.41         &      1911.6         \\
+            &     (-9.57)         &     (12.21)         &     (-4.76)         &     (-4.13)         &      (5.60)         &      (6.19)         &      (1.16)         &      (1.02)         \\
+[1em]
+limitchange &       7.524\sym{***}&     -0.0248         &       11.07         &       16.15         &       0.797         &      -244.1         &     -1088.1         &     16708.8         \\
+            &     (19.02)         &     (-0.43)         &      (1.39)         &      (1.91)         &      (0.96)         &     (-0.94)         &     (-0.97)         &      (1.01)         \\
+\hline
+\(N\)       &      119863         &      114831         &      119863         &      119598         &      118628         &      106075         &      101503         &       70705         \\
+\hline\hline
+\multicolumn{9}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{9}{l}{\footnotesize We controll for marketratio and limitgroup}\\
+\multicolumn{9}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

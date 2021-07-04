@@ -1,0 +1,32 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{3}{c}}
+\hline\hline
+            &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}\\
+            &\multicolumn{1}{c}{lnvolume}&\multicolumn{1}{c}{turn}&\multicolumn{1}{c}{relturn}\\
+\hline
+upperhit    &       0.908\sym{***}&      0.0313\sym{*}  &       1.230\sym{***}\\
+            &     (17.33)         &      (2.48)         &     (25.89)         \\
+[1em]
+upper       &       0.263\sym{***}&     0.00959\sym{*}  &       0.317\sym{***}\\
+            &      (6.31)         &      (2.00)         &     (10.14)         \\
+[1em]
+middle      &      -0.990\sym{***}&    -0.00531\sym{***}&      -0.357\sym{***}\\
+            &    (-21.73)         &     (-5.03)         &     (-7.33)         \\
+[1em]
+lower       &      -0.748\sym{***}&     0.00927         &      -0.160\sym{***}\\
+            &    (-21.94)         &      (0.78)         &     (-3.96)         \\
+[1em]
+lowerhit    &      -0.176\sym{*}  &      0.0155\sym{*}  &       0.449\sym{***}\\
+            &     (-2.54)         &      (2.10)         &      (9.71)         \\
+[1em]
+limitchange &       0.223\sym{*}  &      0.0418         &       0.246\sym{*}  \\
+            &      (2.33)         &      (1.12)         &      (2.47)         \\
+\hline
+\(N\)       &      119863         &      119863         &      119863         \\
+\hline\hline
+\multicolumn{4}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{4}{l}{\footnotesize We controll for marketratio and limitgroup}\\
+\multicolumn{4}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

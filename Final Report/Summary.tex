@@ -1,0 +1,662 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\usepackage{dcolumn}
+\usepackage{booktabs}
+\usepackage{pdflscape}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{dcolumn}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\linespread{1.5}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage[title]{appendix}
+%\usepackage{xepersian}
+%\settextfont{XB Zar}
+%\setdigitfont{XB Zar}
+
+\begin{document}
+\nopagebreak
+\newgeometry{margin = 1.2cm}
+\title{
+ Price Limit and Attention Grabbing \\
+  \large 
+ Impact of price limit hit on return, volume, and behavior of investors
+  }
+\author{S.Morteza Aghajanadeh}
+\nopagebreak
+{\maketitle}
+
+Stocks in the Tehran Securities Exchange that hit upper price limits typically exhibit two characteristics: high
+returns and high volumes. We show that these price limit events attract investors' attention.
+Attention-grabbing events lead active individual investors to buy stocks.
+Upper price limit events coincide with initial price increases, followed by statistically
+significant price mean reversion over the following week.
+ Rational traders profit in
+response to attention-based buying. Smart traders accumulate shares on date t, sell shares on date t+1, and
+earn an average daily profit of 3.8\%. 
+
+Furthermore, we study the effect of the lower price hit on return and volumes. Literature often ignores this event as attention-grabbing because where investors are restricted for short selling, they do not have any selling problem. However, we show that this event can drive investors to sell their portfolios. 
+
+
+
+
+\section{Probabilty of event}
+
+
+\begin{landscape}
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth ]{MNH.eps}
+\caption{}
+\label{fig:mnh}
+\end{figure}
+\end{landscape}
+
+\begin{landscape}
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth ]{MNH2.eps}
+\caption{}
+\label{fig:mnh2}
+\end{figure}
+\end{landscape}
+
+
+
+{\begin{table}[htbp]
+  \centering
+    \begin{tabular}{|l|c|cc|ccccc|}
+    \hline
+    Event & {count} & {mean} &{std} &{min} & 25\%  & 50\%  & 75\%  & {max} \\
+    \hline
+        upperHit & 449   & 11.33 & 6.42  & 0     & 7.17  & 10.08 & 13.61 & 50.00 \\
+        lowerHit & 449   & 7.88  & 4.24  & 0     & 4.68  & 7.34  & 10.18 & 29.15 \\
+        $ u|u $   & 448   & 51.64 & 11.70 & 15.38462 & 44.29 & 51.23 & 58.38 & 94.44 \\
+        $ l|u $   & 448   & 12.73 & 6.21  & 0     & 9.32  & 12.44 & 16.00 & 94.44 \\
+        $ u|l $   & 447   & 16.96 & 7.72  & 0     & 12.50 & 16.67 & 20.930233 & 91.89 \\
+        $ l|l $   & 447   & 37.74 & 10.97 & 0     & 31.0961 & 37.50 & 44.12 & 91.89 \\
+        $ u|(u|u) $ & 448   & 7.19  & 5.54  & 0     & 4.09  & 5.89  & 8.71  & 46.72 \\
+        $ l|(l|l) $ & 444   & 1.71  & 1.36  & 0     & 0.88  & 1.47  & 2.21  & 12.12 \\
+        $ u|(l|l) $ & 448   & 1.77  & 1.28  & 0     & 0.98  & 1.53  & 2.27  & 11.73 \\
+        $ l|(u|u) $ & 444   & 3.73  & 2.73  & 0     & 1.83  & 3.25  & 4.86  & 16.95 \\
+         \hline
+    \end{tabular}
+\end{table}}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.65\linewidth]{PUL2.png}
+\caption{}
+\label{fig:pul2}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.65\linewidth]{PUL.png}
+\caption{}
+\label{fig:pul}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{DPL.eps}
+\caption{}
+\label{fig:dpl}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{DPU.eps}
+\caption{}
+\label{fig:dpu}
+\end{figure}
+
+\FloatBarrier
+‌ % % % % % % % % % % % % % % %
+‌ %  AR 
+\section{Abnormal Return}
+
+Abnormal Returns are defined as a difference between the actual return for a stock and the return based on the CAPM equation's 60-day market expectations.
+The first step is to calculate the CAPM model coefficients for the asset and then, from that equation, measure the expected return for the asset. 
+After that, for calculating abnormal return minus expected return from the actual return of date t+1.
+
+\begin{equation*}
+AbR_{t+1} = R_{t+1} - (\hat{\alpha}_{60} + \hat{\beta}_{60} \times (R_{M,t+1}))
+\end{equation*}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{TAR}
+\caption{}
+\label{fig:tar}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{CUAR}
+\caption{}
+\label{fig:cuar}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{CLAR}
+\caption{}
+\label{fig:clar}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{AR}
+\caption{}
+\label{fig:ar}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{95U}
+\caption{}
+\label{fig:95u}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{95L}
+\caption{}
+\label{fig:95l}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{UPNAbR}
+\caption{}
+\label{fig:UPNAbR}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{LPNAbR}
+\caption{}
+\label{fig:LPNAbR}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{CLPNAbR}
+\caption{}
+\label{fig:CLPNAbR}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{CUPNAbR}
+\caption{}
+\label{fig:CUPNAbR}
+\end{figure}
+
+\FloatBarrier
+
+\begin{table}[htbp]
+\centering
+
+{\input{PAbReturn.tex}}
+\end{table}
+
+\FloatBarrier
+
+\linespread{0.5}
+\section{Trading Strategy}
+‌ % % % % % % % % % % % % % % %
+‌ % Open close last
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.6\linewidth]{DUT}
+\caption{}
+\label{fig:dut}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.65\linewidth]{DLT}
+\caption{}
+\label{fig:dlt}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{DCLT}
+\caption{}
+\label{fig:dclt}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{DCUT}
+\caption{}
+\label{fig:dcut}
+\end{figure}
+\FloatBarrier
+
+\linespread{1.5}
+\begin{table}[htbp]
+\centering
+
+{\input{PReturn1.tex}}
+\end{table}
+
+\FloatBarrier
+
+‌ % % % % % % % % % % % % % % %
+‌ % I
+
+\section{Buy-Sell Imbalances}
+Buy-sell imbalances for each type is defined as the net buying ratio of stock k on date t by a particular type to the amounts bought and sold by that type.
+
+\begin{equation*}
+\begin{matrix}
+\text{Imbalance}_{k,t}^{\text{Indiv}} = \frac{\text{Buys}_{k,t}^{\text{Indiv}} - \text{Sells}_{k,t}^{\text{Indiv}}}{\text{Buys}_{k,t}^{\text{Indiv}} + \text{Sells}_{k,t}^{\text{Indiv}}} & & &  \text{Imbalance}_{k,t}^{\text{Inst}} = \frac{\text{Buys}_{k,t}^{\text{Inst}} - \text{Sells}_{k,t}^{\text{Inst}}}{\text{Buys}_{k,t}^{\text{Inst}} + \text{Sells}_{k,t}^{\text{Inst}}}
+\end{matrix}
+\end{equation*}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{UI}
+\caption{}
+\label{fig:ui}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{UI2.eps}
+\caption{}
+\label{fig:ui2}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{LI}
+\caption{}
+\label{fig:li}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{LI2.eps}
+\caption{}
+\label{fig:li2}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{CLI}
+\caption{}
+\label{fig:cli}
+\end{figure}
+
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{TUI}
+\caption{}
+\label{fig:tui}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{NUI}
+\caption{}
+\label{fig:NUI}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{PUI}
+\caption{}
+\label{fig:PUI}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{NLI}
+\caption{}
+\label{fig:NLI}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{PLI}
+\caption{}
+\label{fig:PLI}
+\end{figure}
+
+
+\FloatBarrier
+
+\begin{table}[htbp]
+\centering
+
+{\input{PImbalance.tex}}
+\end{table}
+
+
+\FloatBarrier
+
+‌ % % % % % % % % % % % % % % %
+‌ % T
+\section{Volume}
+Turnover of stock is defined as the amount traded in Rial divided by the stock's market capitalization. Based on this factor, we define Relative Turnover by the ratio of the turnover of stock k on date t to the 60 days average turnover of stock k.
+\begin{equation*}
+\begin{matrix}
+\text{Turn}_{k,t} = \frac{\text{Volume}(\text{Rial})_{k,t}}{\text{MarketCap}_{k,t}}&&&&
+\text{RelTurn}_{k,t} = \frac{\text{Turn}_{k,t}}{AVG_{60}(\text{Turn}_{k,t})}
+\end{matrix}
+\end{equation*}
+
+\subsection{Turnover}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{TT}
+\caption{}
+\label{fig:tt}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{T}
+\caption{}
+\label{fig:t}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{CUT}
+\caption{}
+\label{fig:cut}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{CLT}
+\caption{}
+\label{fig:clt}
+\end{figure}
+
+\FloatBarrier
+
+‌ % % % % % % % % % % % % % % %
+‌ %RT
+\subsection{Relative Turnover}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{TRT}
+\caption{}
+\label{fig:trt}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{CLRT}
+\caption{}
+\label{fig:clrt}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{CURT}
+\caption{}
+\label{fig:curt}
+\end{figure}
+
+
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{RT}
+\caption{}
+\label{fig:rt}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{UPNRT.eps}
+\caption{}
+\label{fig:UPNRT}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{LPNRT.eps}
+\caption{}
+\label{fig:LPNRT}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{CUPNRT.eps}
+\caption{}
+\label{fig:CUPNRT}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{CLPNRT.eps}
+\caption{}
+\label{fig:CLPNRT}
+\end{figure}
+
+\FloatBarrier
+\begin{table}[htbp]
+\centering
+
+{\input{PVolume.tex}}
+\end{table}
+
+
+
+\FloatBarrier
+
+
+%
+%\section{Value}
+%
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[width=0.7\linewidth]{UV}
+%\caption{}
+%\label{fig:UV}
+%\end{figure}
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[width=0.7\linewidth]{LV}
+%\caption{}
+%\label{fig:LV}
+%\end{figure}
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[width=0.7\linewidth]{CUV}
+%\caption{}
+%\label{fig:CUV}
+%\end{figure}
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[width=0.7\linewidth]{CLV}
+%\caption{}
+%\label{fig:CLV}
+%\end{figure}
+%
+%\FloatBarrier
+%
+%
+%
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[width=0.7\linewidth]{UV2}
+%\caption{}
+%\label{fig:UV2}
+%\end{figure}
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[width=0.7\linewidth]{LV2}
+%\caption{}
+%\label{fig:LV2}
+%\end{figure}
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[width=0.7\linewidth]{CUV2}
+%\caption{}
+%\label{fig:CUV2}
+%\end{figure}
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[width=0.7\linewidth]{CLV2}
+%\caption{}
+%\label{fig:CLV2}
+%\end{figure}
+%
+%\FloatBarrier
+%
+%
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[width=0.7\linewidth]{UVCUM}
+%\caption{}
+%\label{fig:UVCUM}
+%\end{figure}
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[width=0.7\linewidth]{LVCUM}
+%\caption{}
+%\label{fig:LVCUM}
+%\end{figure}
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[width=0.7\linewidth]{CUVCUM}
+%\caption{}
+%\label{fig:CUVCUM}
+%\end{figure}
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[width=0.7\linewidth]{CLVCUM}
+%\caption{}
+%\label{fig:CLVCUM}
+%\end{figure}
+%
+%\FloatBarrier
+\begin{appendices}
+
+\section{Extra Return from Market}
+
+
+
+‌ % % % % % % % % % % % % % % %
+‌ % ER
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{TER}
+\caption{}
+\label{fig:ter}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{CUER}
+\caption{}
+\label{fig:cuer}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{CLER}
+\caption{}
+\label{fig:cler}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{ER}
+\caption{}
+\label{fig:er}
+\end{figure}
+
+\FloatBarrier
+\begin{table}[htbp]
+\centering
+
+{\input{PEReturn.tex}}
+\end{table}
+
+
+
+\FloatBarrier
+
+‌ % % % % % % % % % % % % % % %
+‌ % R
+\section{Return}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{TR}
+\caption{}
+\label{fig:tr}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{R}
+\caption{}
+\label{fig:r}
+\end{figure}
+
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{CUR}
+\caption{}
+\label{fig:cur}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{CLR}
+\caption{}
+\label{fig:clr}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\FloatBarrier
+\begin{table}[htbp]
+\centering
+
+{\input{PReturn2.tex}}
+\end{table}
+
+\end{appendices}
+
+\end{document}

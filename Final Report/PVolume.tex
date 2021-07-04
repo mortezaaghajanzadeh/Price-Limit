@@ -1,0 +1,49 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{3}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}\\
+                    &\multicolumn{1}{c}{lnvolume}&\multicolumn{1}{c}{Turn}&\multicolumn{1}{c}{RelTurn}\\
+\hline
+upperHit            &       2.179\sym{***}&     0.00636\sym{***}&       1.107\sym{***}\\
+                    &     (44.82)         &     (20.34)         &     (49.38)         \\
+[1em]
+[4.5,5)             &       0.724\sym{***}&     0.00286\sym{***}&       0.599\sym{***}\\
+                    &     (37.13)         &     (14.50)         &     (35.42)         \\
+[1em]
+[4,4.5)             &       0.402\sym{***}&    0.000999\sym{***}&       0.161\sym{***}\\
+                    &     (24.09)         &      (8.14)         &     (12.51)         \\
+[1em]
+[2,4)               &       0.878\sym{***}&     0.00215\sym{***}&       0.288\sym{***}\\
+                    &     (31.82)         &     (16.60)         &     (24.34)         \\
+[1em]
+(-2,2)              &     -0.0289         &     0.00210\sym{***}&      0.0713\sym{***}\\
+                    &     (-1.05)         &     (11.53)         &      (4.03)         \\
+[1em]
+(-4,-2]             &       0.519\sym{***}&     0.00205\sym{***}&       0.144\sym{***}\\
+                    &     (28.90)         &     (16.42)         &     (10.31)         \\
+[1em]
+(-4.5,-4]           &       0.305\sym{***}&     0.00111\sym{***}&      0.0821\sym{***}\\
+                    &     (16.63)         &      (4.00)         &      (6.54)         \\
+[1em]
+(-5,-4.5]           &       0.376\sym{***}&     0.00124\sym{***}&       0.145\sym{***}\\
+                    &     (13.39)         &      (4.88)         &     (11.01)         \\
+[1em]
+lowerHit            &       1.429\sym{***}&     0.00480\sym{***}&       0.514\sym{***}\\
+                    &     (37.04)         &     (17.73)         &     (26.49)         \\
+[1em]
+Up Market           &       0.268\sym{***}&    0.000737\sym{***}&       0.122\sym{***}\\
+                    &     (26.43)         &      (6.88)         &     (18.54)         \\
+[1em]
+Constant            &       12.32\sym{***}&    -0.00120\sym{***}&       0.394\sym{***}\\
+                    &    (280.83)         &     (-4.05)         &     (19.25)         \\
+\hline
+Observations        &      305297         &      305298         &      305298         \\
+\(R^{2}\)           &       0.225         &       0.028         &       0.068         \\
+\hline\hline
+\multicolumn{4}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{4}{l}{\footnotesize This table reports fixed effect estimates of volume, turnover and relative turnover.}\\
+\multicolumn{4}{l}{\footnotesize The independent variables are dummies that control for events . We calculate standard errors by using fixed effect on stock level}\\
+\multicolumn{4}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

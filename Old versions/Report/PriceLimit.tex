@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+
+\usepackage{dcolumn}
+\usepackage{booktabs}
+\usepackage{pdflscape}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{amsmath}
+\usepackage{geometry}
+\linespread{1.5}
+
+\begin{document}
+\title{Price Limit}
+\author{S.Morteza Aghajanzadeh}
+\maketitle
+
+Do Stocks in the Tehran market that hit upper price limits typically exhibit  high
+returns and volumes ?
+
+\section{Return}
+
+\subsection{Depended Variables}
+ \textbf{Close to Open} return is calculated using
+the closing price at the event day and the open price on the next day.
+
+ \textbf{Open to Close} return is calculated using the open price and closing price on
+the next day.
+
+ \textbf{Forward return}  is day 1,2, 3, 4, 5 and so on returns from the event day.
+
+\subsection{Control Variables}
+\textbf{Upper hit} and \textbf{Lower hit} are dummy variables that indicates upper and lower limit touched at time t.
+
+\textbf{Upper} and \textbf{Lower} are dummy variables that indicates maximum or minimum trading price is above and lower than half of daily limit.
+
+\textbf{Middle} is dummy variable that indicates maximum and minimum trading price is lower than half of daily limit.
+
+\textbf{Limit Change} is dummy variable that indicated changing in price limit at time t.
+
+
+\newgeometry{top=15mm, bottom=25mm,left = 15mm,right = 15mm}
+\begin{landscape}
+\begin{table}[htbp]
+\centering
+\input{example1.tex}
+\caption{OLS regression, Clustered by calendar date}
+\end{table}
+
+
+\begin{table}[htbp]
+\centering
+\input{example2.tex}
+\caption{OLS regression, Clustered by calendar Stocks}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\input{example4.tex}
+\caption{Fixed Effect regression on stocks}
+\end{table}
+\end{landscape}
+
+
+\FloatBarrier
+\restoregeometry
+\section{Volume}
+
+\subsection{Depended Variables}
+
+$ \textbf{Turn}_{k,t} $ Stock k's turnover on date t is defined as the amount traded in Rial divided by the market capitalization of the free float.
+
+\begin{equation}
+\text{Turn}_{k,t} = \frac{\text{Volume}(\text{Rial})_{k,t}}{\text{MarketCap(FreeFloat)}_{k,t}}
+\end{equation}
+
+\textbf{Relative turnover} is defined as the ratio of the turnover of stock k on date t to the average turnover of stock k during our sample period.
+
+\begin{equation}
+\text{RelTurn}_{k,t} = \frac{\text{Turn}_{k,t}}{AVG(\text{Turn}_{k,t})}
+\end{equation}
+
+
+
+\newgeometry{top=15mm, bottom=35mm,left = 15mm,right = 15mm}
+
+\begin{table}[htbp]
+\centering
+\input{example3.tex}
+\caption{OLS regression, Clustered by calendar date}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\input{example5.tex}
+\caption{Fixed Effect regression on stocks}
+\end{table}
+\end{document}

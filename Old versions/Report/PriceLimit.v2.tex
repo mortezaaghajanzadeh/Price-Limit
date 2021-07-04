@@ -1,0 +1,228 @@
+\documentclass[12pt]{article}
+
+\usepackage{dcolumn}
+\usepackage{booktabs}
+\usepackage{pdflscape}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage[margin = 3cm]{geometry}
+\linespread{1.5}
+\usepackage{xepersian}
+\settextfont{XB Zar}
+\setdigitfont{XB Zar}
+
+\begin{document}
+\title{دامنه قیمت}
+\author{سید مرتضی آقاجان‌زاده}
+\maketitle
+
+در بازار سهام تهران محدودیت‌های نوسان روزانه برای نماد‌ها به صورت متفاوت وجود‌ دارد. آیا این محدودیت روزانه سبب جلب توجه سرمایه‌گذاران به سهم شده و در بازده و حجم روزانه سهم تغییر ایجاد می‌کند و باعث جذب سرمایه گذاران حقیقی به سهم می‌شود؟
+
+\section{مطالعات گذشته}
+\subsection{\lr{Predictable behavior, profits, and attention}}
+\label{s1.1}
+این مقاله در صدد آن است در بازار سهام شانگهای در روزی که قیمت سهم به حد بالایی محدوده قیمتی برخورد می‌کند از خود بازده بالا، حجم بالا و پوشش خبری نشان می‌دهد. این اتفاق توجه سرمایه گذاران را جلب می‌کند. در بازار تعداد سهام بالایی وجود دارد و این اتفاق می‌تواند مجموعه تصمیم گیری سرمایه‌گذاران را محدود کند.این مقاله از داده‌های معاملات روزانه نماد در بازار، قیمت سهام و کلیه معاملات افراد در شهری خاص استفاده کرده‌است تا علاوه بر بررسی حجم معاملات بررسی کند که آیا سرمایه گذاران جدیدی با برخورد قیمت به حد نوسان به سهم جذب می‌شوند یا خیر.
+
+
+جهت بررسی رفتار سرمایه‌گذاران حقیقی شاخص عدم توازن خالص خرید برای زمان $ t $ و $ t+1 $ را به صورت زیر تعریف می‌کند
+
+\lr{\begin{equation}
+\text{Imbalance}_{k,t}^{\text{Indiv}} = \frac{\text{Buys}_{k,t}^{\text{Indiv}} - \text{Sells}_{k,t}^{\text{Indiv}}}{\text{Buys}_{k,t}^{\text{Indiv}} + \text{Sells}_{k,t}^{\text{Indiv}}}
+\label{e1}
+\end{equation}}
+و بیان می‌کند چنانچه برخورد قیمت به حد نوسان توجه سرمایه‌گذاران حقیقی را جذب می‌کند آنگاه این شاخص در دوره $ t+1 $ مثبت است.
+
+از طرفی جهت بررسی حجم معاملات از ملاک‌های زیر استفاده می‌کند که طبعا مانند حال قبل، نیاز است این شاخص‌ها در روزی که قیمت به حد نوسان برخورد می‌کند مثبت باشند.
+
+\lr{\begin{equation}
+\text{Turn}_{k,t} = \frac{\text{Volume}(\text{RBM})_{k,t}}{\text{MarketCap(FreeFloat)}_{k,t}}
+\label{e2}
+\end{equation}}
+\lr{\begin{equation}
+\text{RelTurn}_{k,t} = \frac{\text{Turn}_{k,t}}{AVG(\text{Turn}_{k,t})}
+\label{e3}
+\end{equation}}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\columnwidth]{g1.png}
+\end{figure}
+\FloatBarrier
+\begin{figure}[htbp]
+\includegraphics[width=\columnwidth]{Table4.png}
+\caption{ نتایج  در مقاله بخش \ref {s1.1}}
+\label{g2}
+\end{figure}
+\FloatBarrier
+\subsection{\lr{Daily price limits and destructive market behavior}}
+\label{s1.2}
+در این مقاله در ابتدا بازده سهام در حوالی برخورد قیمت به دامنه نوسان بررسی شده‌است و پس از آن رفتار گونه‌های متفاوت سرمایه‌گذار مورد بررسی قرار گرفته است. در این مقاله از داده‌های در سطح حساب کاربری استفاده شده است.
+
+این مقاله برای بررسی رفتار بازده سهام، از بازده‌های متفاوتی استفاده کرده‌است که در جدول 
+\ref{t1} 
+به صورت خلاصه بیان شده‌است. منظور از زمان $ t $ روزی است که اتفاق رخ می‌دهد. نتایج برآورد‌ها نیز در شکل
+\ref{g1}
+بیان شده‌است.
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|r|l|}
+\hline
+ توضیحات & متغیر\\
+\hline
+
+بازده قیمت پایانی نسبت به اولین قیمت در روز $ t $ & 
+\lr{Close to open} \\
+
+بازده اولین قیمت در روز $ t+1 $ نسبت به قیمت پایانی در روز $ t $ & 
+\lr{Open to close} \\
+
+بازده $ m $ روزه سهام & 
+\lr{Day m } \\
+
+بازده تجمعیی بین بازه $ m $ تا $ n $ روز بعد از دوره $ t $ & 
+\lr{[m,n] } \\
+\hline
+\end{tabular}
+\caption{خلاصه متغیر‌های وابسته تعریف شده در مقاله بخش \ref{s1.2}}
+\label{t1}
+\end{table}
+کار دیگر مقاله بررسی رفتار سرمایه‌گذاران بزرگ در دوره t و t+1 می‌باشد که با توجه به دسترسی به داده‌های در سطح حساب کاربری این کار امکان پذیر بوده‌است.
+نتایج در شکل 
+\ref{g3}
+نشان داده شده‌است.
+\begin{figure}[htbp]
+\includegraphics[width=1\columnwidth]{g2.png}
+\caption{نتایج بررسی رفتار سرمایه‌گذاران عمده در مقاله بخش \ref {s1.2}}
+\label{g3}
+\end{figure}
+
+\begin{landscape}
+\begin{figure}[htbp]
+\includegraphics[width=1\columnwidth]{Table1.png}
+\caption{خروجی نتایج رگرسیون در مقاله بخش \ref {s1.2}}
+\label{g1}
+\end{figure}
+\end{landscape}
+\FloatBarrier
+
+
+\section{نتایج مقالات با استفاده از داده‌های ایران}
+در بازار سهام ایران برخلاف بازار چین انوع مختلف دامنه نوسان وجود دارد. به همین علت به منظور کنترل حوادث متغیر‌های کنترل کننده دامنه نوسان به صورتی متفاوت تعریف شده‌اند. دو دسته متغیر‌های کنترلی تعریف می‌شود. در دسته اول 
+($ \text{Upperhit} $ 
+ و
+ $ \text{Lowerhit} $)
+برخورد حداکثر قیمت و حداقل قیمت معاملات به حد بالا و پایین نوسان بررسی می‌شود. در دسته دوم
+($ \text{Upper} $ 
+ و
+ $ \text{Lower} $)
+ قرار گرفتن حداکثر قیمت بالا‌تر از نصف حد بالای نوسان و حداقل قیمت کمتر از نصف حد پایین نوسان بررسی می‌شود. برای مثال چنانچه سهم دارای دامنه نوسان
+  $ \pm 5 \% $
+باشد برای متغیر 
+$ \text{Upper} $
+اگر درصد تغییرات حداکثر قیمت بیشتر مساوی 
+$ 2.5 \%  $
+باشد آنگاه متغیر فوق مقدار یک به خود می‌گیرد.
+همچنین برای متغیر 
+$ \text{Lower} $
+نیز چنانچه درصد تغییرات حداقل قیمت کوچکتر مساوی 
+$- 2.5 \%  $
+ آنگاه متغیر فوق مقدار یک به خود می‌گیرد. لازم به ذکر است چنانچه قیمت به حد نوسان برخورد کند این متغیر‌ها مقدار صفر را می‌گیرند. از طرفی چنانچه با توجه به مثال حداکثر و حداقل قیمت معاملات در بازه 
+ $ [-2.5\%,+2.5\%] $
+ قرار گیرد متغییر $ Middle $ برابر یک قرار می‌گیرد.
+ کنترل‌های دیگری همچون نوع دامنه نوسان، سهم از بازار نماد  و تغییر دامنه نوسان نیز مورد استفاده قرار گرفته‌است.
+
+
+در ادامه در سه بخش مجزا بازده، حجم و خرید حقیقی سهام در روز‌های حادثه مورد بررسی قرار می‌گیرد.در هر بخش از داده‌های معاملات از سال 1396 تا انتهای 1398 استفاده شده‌است.
+
+
+\subsection{بازده}
+در این بخش از متغیر‌های وابسته تعریف شده در جدول 
+\ref{t1}
+استفاده شده‌است. ستون‌های 5 الی 8 جداول 
+\ref{t2}-\ref{t4}
+بازده تجمیعی میان روز‌های نوشته شده را نمایندگی می‌کنند. جدول 
+\ref{t2}
+و
+\ref{t3}
+رگرسیون ساده با دسته‌بندی به ترتیب در سطح زمان ($ t $) و در سطح نماد ($ id $) جهت محاسبه واریانس می‌باشد. جدول 
+ \ref{t4}
+ محاسبات همین معادلات به وسیله اثر ثابت در سطح نماد ($ id $) می‌باشد.
+
+
+
+\newgeometry{top=15mm, bottom=25mm,left = 15mm,right = 15mm}
+
+\begin{LTR}
+\begin{landscape}
+\begin{table}[htbp]
+\centering
+\input{example1.tex}
+\caption{OLS regression, Clustered by calendar date}
+\label{t2}
+\end{table}
+\begin{table}[htbp]
+\centering
+\input{example2.tex}
+\caption{OLS regression, Clustered by Stocks}
+\label{t3}
+\end{table}
+\end{landscape}
+\begin{landscape}
+\begin{table}[htbp]
+\centering
+\input{example4.tex}
+\caption{Fixed Effect regression on stocks}
+\label{t4}
+\end{table}
+\end{landscape}
+\end{LTR}
+
+
+\restoregeometry
+\subsection{حجم}
+
+در این قسمت با استفاده از پارامتر‌های تعریف شده در معادلات 
+\ref{e2} 
+و
+\ref{e3}
+ و لگاریتم حجم معاملات تاثیر اتفاقات رابر روی حجم معاملات بررسی می‌کنیم. جدول زیر خلاصه آماری نتایج به دو روش دسته بندی در زمان و اثر ثابت برای هر نماد نشان داده شده‌است.
+
+
+%\newgeometry{top=15mm, bottom=35mm,left = 15mm,right = 15mm}
+\begin{LTR}
+%\lr{\begin{table}[htbp]
+%\centering
+%\input{example3.tex}
+%\caption{OLS regression, Clustered by calendar date}
+%\label{t5}
+%\end{table}}
+\lr{\begin{table}[htbp]
+\centering
+\input{example5.tex}
+\label{t6}
+\end{table}}
+
+\end{LTR}
+\FloatBarrier
+
+\subsection{خرید حقیقی و حقوقی}
+در این بخش با استفاده از رابطه‌ی تعریف شده برای حقیقی به وسیله رابطه 
+\ref{e1}
+بر همان اساس برای حقوقی نیز آن شاخص را تولید می‌کنیم. در مقاله این شاخص عدم توازن را برای دوره $ t+1 $ مورد بررسی قرار داده بود از این جهت در این نتایج هر دو دوره گزارش شده‌است.
+\begin{LTR}
+\lr{\begin{table}[htbp]
+\centering
+\input{example6.tex}
+\caption{OLS regression, Clustered by calendar date}
+\label{t7}
+\end{table}}
+\lr{\begin{table}[htbp]
+\centering
+\input{example7.tex}
+\caption{Fixed Effect regression on stocks}
+\label{t8}
+\end{table}}
+\end{LTR}
+\end{document}

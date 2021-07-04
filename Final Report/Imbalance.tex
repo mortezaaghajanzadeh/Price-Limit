@@ -1,0 +1,49 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+                    &\multicolumn{1}{c}{InslImbalance}&\multicolumn{1}{c}{FInslImbalance}&\multicolumn{1}{c}{IndlImbalance}&\multicolumn{1}{c}{FIndlImbalance}\\
+\hline
+upperHit            &      -0.451\sym{***}&      -0.289\sym{***}&       0.107\sym{***}&      0.0909\sym{***}\\
+                    &    (-34.80)         &    (-15.91)         &     (22.17)         &     (15.47)         \\
+[1em]
+[4.5,5)             &      -0.232\sym{***}&      -0.169\sym{***}&      0.0653\sym{***}&      0.0446\sym{***}\\
+                    &    (-25.12)         &    (-15.93)         &     (25.16)         &     (16.99)         \\
+[1em]
+[4,4.5)             &     -0.0684\sym{***}&     -0.0123         &      0.0104\sym{***}&     0.00855\sym{***}\\
+                    &     (-7.38)         &     (-1.25)         &      (4.77)         &      (3.71)         \\
+[1em]
+[2,4)               &     -0.0655\sym{***}&     -0.0241\sym{*}  &    -0.00248         &     0.00857\sym{**} \\
+                    &     (-8.93)         &     (-2.57)         &     (-1.10)         &      (3.12)         \\
+[1em]
+(-2,2)              &       0.123\sym{***}&      0.0607\sym{*}  &     -0.0836\sym{***}&     -0.0465\sym{***}\\
+                    &      (7.02)         &      (2.43)         &    (-12.40)         &     (-5.21)         \\
+[1em]
+(-4,-2]             &       0.148\sym{***}&      0.0449\sym{***}&     -0.0477\sym{***}&     -0.0166\sym{***}\\
+                    &     (19.48)         &      (4.56)         &    (-19.37)         &     (-5.75)         \\
+[1em]
+(-4.5,-4]           &     0.00858         &    -0.00569         &      0.0109\sym{***}&     0.00684\sym{**} \\
+                    &      (0.95)         &     (-0.56)         &      (4.89)         &      (2.61)         \\
+[1em]
+(-5,-4.5]           &      0.0437\sym{***}&     -0.0159         &     0.00452         &      0.0102\sym{***}\\
+                    &      (4.34)         &     (-1.25)         &      (1.74)         &      (3.40)         \\
+[1em]
+lowerHit            &       0.206\sym{***}&      0.0180         &     -0.0271\sym{***}&     0.00934         \\
+                    &     (17.62)         &      (0.71)         &     (-6.84)         &      (1.28)         \\
+[1em]
+Up Market           &     -0.0809\sym{***}&     -0.0317         &      0.0362\sym{***}&      0.0179\sym{***}\\
+                    &     (-8.98)         &     (-1.95)         &     (12.52)         &      (4.05)         \\
+[1em]
+Constant            &       0.228\sym{***}&       0.191\sym{***}&     -0.0553\sym{***}&     -0.0599\sym{***}\\
+                    &     (17.24)         &      (9.45)         &    (-12.33)         &    (-10.11)         \\
+\hline
+Observations        &      208681         &      208424         &      281909         &      281462         \\
+\(R^{2}\)           &       0.102         &       0.026         &       0.070         &       0.035         \\
+\hline\hline
+\multicolumn{5}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{5}{l}{\footnotesize This table reports OLS estimates of net-buy imbalances.}\\
+\multicolumn{5}{l}{\footnotesize The independent variables are dummies that control for events . We calculate standard errors by clustering on each stocks}\\
+\multicolumn{5}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

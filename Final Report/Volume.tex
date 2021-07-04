@@ -1,0 +1,49 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{3}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}\\
+                    &\multicolumn{1}{c}{lnvolume}&\multicolumn{1}{c}{Turn}&\multicolumn{1}{c}{RelTurn}\\
+\hline
+upperHit            &       1.981\sym{***}&     0.00661\sym{***}&       1.053\sym{***}\\
+                    &     (35.40)         &     (35.29)         &     (25.49)         \\
+[1em]
+[4.5,5)             &       0.625\sym{***}&     0.00296\sym{***}&       0.587\sym{***}\\
+                    &     (22.70)         &     (15.10)         &     (22.53)         \\
+[1em]
+[4,4.5)             &       0.291\sym{***}&    0.000975\sym{***}&       0.154\sym{***}\\
+                    &     (13.24)         &      (5.96)         &     (11.23)         \\
+[1em]
+[2,4)               &       0.914\sym{***}&     0.00239\sym{***}&       0.272\sym{***}\\
+                    &     (27.93)         &     (21.73)         &     (16.02)         \\
+[1em]
+(-2,2)              &    -0.00734         &     0.00181\sym{***}&      0.0929\sym{***}\\
+                    &     (-0.18)         &     (11.09)         &      (3.30)         \\
+[1em]
+(-4,-2]             &       0.507\sym{***}&     0.00216\sym{***}&       0.136\sym{***}\\
+                    &     (19.48)         &     (19.03)         &      (7.39)         \\
+[1em]
+(-4.5,-4]           &       0.156\sym{***}&     0.00105\sym{***}&      0.0730\sym{***}\\
+                    &      (6.36)         &      (3.88)         &      (5.76)         \\
+[1em]
+(-5,-4.5]           &       0.206\sym{***}&     0.00129\sym{***}&       0.135\sym{***}\\
+                    &      (4.84)         &      (4.43)         &      (6.45)         \\
+[1em]
+lowerHit            &       1.101\sym{***}&     0.00496\sym{***}&       0.471\sym{***}\\
+                    &     (18.81)         &     (23.78)         &     (14.08)         \\
+[1em]
+Up Market           &       0.216\sym{***}&    0.000711\sym{***}&       0.121\sym{***}\\
+                    &      (3.43)         &      (5.21)         &      (4.31)         \\
+[1em]
+Constant            &       12.14\sym{***}&    -0.00116\sym{***}&       0.404\sym{***}\\
+                    &    (154.68)         &     (-6.33)         &     (12.83)         \\
+\hline
+Observations        &      305297         &      305298         &      305298         \\
+\(R^{2}\)           &       0.138         &       0.037         &       0.064         \\
+\hline\hline
+\multicolumn{4}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{4}{l}{\footnotesize This table reports OLS estimates of volume, turnover and relative turnover.}\\
+\multicolumn{4}{l}{\footnotesize The independent variables are dummies that control for events . We calculate standard errors by clustering on each stocks}\\
+\multicolumn{4}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

@@ -1,0 +1,49 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{6}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}&\multicolumn{1}{c}{(5)}&\multicolumn{1}{c}{(6)}\\
+                    &\multicolumn{1}{c}{Close-Open}&\multicolumn{1}{c}{Last-Open}&\multicolumn{1}{c}{TOpen-Last}&\multicolumn{1}{c}{TOpen-Close}&\multicolumn{1}{c}{TClose-TOpen}&\multicolumn{1}{c}{TLast-TOpen}\\
+\hline
+upperHit            &       0.290\sym{***}&       1.416\sym{***}&       2.080\sym{***}&       3.142\sym{***}&      -1.292\sym{***}&      -0.753\sym{***}\\
+                    &      (4.21)         &     (37.18)         &     (71.88)         &     (63.79)         &    (-29.25)         &    (-30.79)         \\
+[1em]
+[4.5,5)             &       0.736\sym{***}&       1.054\sym{***}&       1.266\sym{***}&       1.591\sym{***}&      -0.305\sym{***}&      -0.240\sym{***}\\
+                    &     (20.03)         &     (26.58)         &     (41.46)         &     (44.36)         &    (-10.20)         &     (-7.57)         \\
+[1em]
+[4,4.5)             &       0.205\sym{***}&       0.254\sym{***}&       0.124\sym{***}&       0.167\sym{***}&      -0.264\sym{***}&      -0.314\sym{***}\\
+                    &      (6.31)         &      (6.47)         &      (4.49)         &      (5.35)         &     (-9.78)         &    (-10.06)         \\
+[1em]
+[2,4)               &      -0.910\sym{***}&      -0.305\sym{***}&      0.0716\sym{***}&       0.611\sym{***}&      -0.644\sym{***}&      -0.193\sym{***}\\
+                    &    (-19.19)         &    (-11.32)         &      (3.84)         &     (18.77)         &    (-22.48)         &    (-10.14)         \\
+[1em]
+(-2,2)              &      -0.574\sym{***}&      -0.191\sym{***}&      -0.276\sym{***}&      0.0302         &      -0.292\sym{***}&      0.0275         \\
+                    &    (-17.41)         &     (-7.52)         &    (-12.22)         &      (0.95)         &    (-12.14)         &      (1.23)         \\
+[1em]
+(-4,-2]             &      -0.249\sym{***}&      -0.408\sym{***}&      -0.289\sym{***}&      -0.506\sym{***}&   -0.000351         &      0.0118         \\
+                    &     (-8.74)         &    (-16.00)         &    (-16.15)         &    (-17.49)         &     (-0.02)         &      (0.63)         \\
+[1em]
+(-4.5,-4]           &      -0.128\sym{***}&      -0.252\sym{***}&      0.0440         &     -0.0851\sym{**} &      0.0615\sym{*}  &      0.0390         \\
+                    &     (-3.55)         &     (-6.52)         &      (1.63)         &     (-2.70)         &      (2.35)         &      (1.31)         \\
+[1em]
+(-5,-4.5]           &     -0.0831         &      -0.559\sym{***}&      -0.796\sym{***}&      -1.251\sym{***}&       0.717\sym{***}&       0.250\sym{***}\\
+                    &     (-1.95)         &    (-15.04)         &    (-27.07)         &    (-31.02)         &     (21.16)         &      (8.14)         \\
+[1em]
+lowerHit            &      -0.645\sym{***}&      -1.419\sym{***}&      -1.378\sym{***}&      -2.189\sym{***}&       0.874\sym{***}&       0.427\sym{***}\\
+                    &    (-11.15)         &    (-39.01)         &    (-46.87)         &    (-47.96)         &     (24.79)         &     (15.58)         \\
+[1em]
+Up Market           &       0.133\sym{***}&       0.116\sym{***}&       0.260\sym{***}&       0.240\sym{***}&      -0.176\sym{***}&      -0.252\sym{***}\\
+                    &      (7.56)         &      (8.79)         &     (22.34)         &     (16.49)         &    (-13.78)         &    (-22.40)         \\
+[1em]
+Constant            &       0.169\sym{***}&      -0.177\sym{***}&       0.252\sym{***}&     -0.0135         &       0.453\sym{***}&       0.284\sym{***}\\
+                    &      (4.80)         &     (-5.62)         &     (10.72)         &     (-0.38)         &     (16.24)         &     (11.08)         \\
+\hline
+Observations        &      305298         &      305298         &      304849         &      304849         &      304839         &      304839         \\
+\(R^{2}\)           &       0.031         &       0.100         &       0.125         &       0.204         &       0.085         &       0.024         \\
+\hline\hline
+\multicolumn{7}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{7}{l}{\footnotesize This table reports fixed effect estimates of Open, Last and Close returns.}\\
+\multicolumn{7}{l}{\footnotesize The independent variables are dummies that control for events . We calculate standard errors by using fixed effect on stock level}\\
+\multicolumn{7}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}

@@ -1,0 +1,32 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\hline\hline
+            &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+            &\multicolumn{1}{c}{inslimbalance}&\multicolumn{1}{c}{finslimbalance}&\multicolumn{1}{c}{indlimbalance}&\multicolumn{1}{c}{findlimbalance}\\
+\hline
+upperhit    &      -0.543\sym{***}&      -0.251\sym{***}&       0.112\sym{***}&      0.0611\sym{***}\\
+            &    (-34.09)         &    (-18.49)         &     (18.57)         &     (13.35)         \\
+[1em]
+upper       &      -0.207\sym{***}&     -0.0744\sym{***}&      0.0262\sym{***}&      0.0152\sym{***}\\
+            &    (-19.67)         &     (-6.94)         &      (8.03)         &      (5.27)         \\
+[1em]
+middle      &     -0.0389\sym{**} &     -0.0235         &     -0.0169\sym{**} &     -0.0134\sym{**} \\
+            &     (-2.74)         &     (-1.71)         &     (-3.23)         &     (-2.86)         \\
+[1em]
+lower       &     -0.0218\sym{*}  &     -0.0485\sym{***}&      0.0137\sym{***}&      0.0113\sym{***}\\
+            &     (-2.33)         &     (-5.17)         &      (4.95)         &      (4.96)         \\
+[1em]
+lowerhit    &       0.128\sym{***}&     -0.0152         &    -0.00244         &      0.0104\sym{**} \\
+            &      (8.98)         &     (-1.16)         &     (-0.63)         &      (2.91)         \\
+[1em]
+limitchange &    -0.00534         &     -0.0117         &      0.0104\sym{*}  &      0.0164\sym{***}\\
+            &     (-0.32)         &     (-0.67)         &      (2.17)         &      (3.45)         \\
+\hline
+\(N\)       &       77699         &       77684         &      119820         &      119819         \\
+\hline\hline
+\multicolumn{5}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+\multicolumn{5}{l}{\footnotesize We controll for marketratio and limitgroup}\\
+\multicolumn{5}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+}
