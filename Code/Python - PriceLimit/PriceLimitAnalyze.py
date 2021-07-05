@@ -201,7 +201,6 @@ df = df.drop(
             | (df.close_price == 100.0)
             | (df.close_price == 10.0)
         )
-        & (df.volume < 1)
     ].index
 )
 df = df.drop(df[df["name"].isin(symbols)].index)
