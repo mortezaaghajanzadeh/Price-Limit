@@ -286,6 +286,7 @@ data = (
              how="right")
 ).sort_values(by=["name", "date"])
 #%%
+data = data[data.jalaliDate<14000000]
 data = data.drop(data[data.volume == 0].index)
 gg = data.groupby(["name"])
 data["Total"] = gg["Total"].fillna(method="ffill")
@@ -326,9 +327,11 @@ data.loc[(abs(data["Limit"]) > 10), "LimitGroup"] = 0
 gg = data.groupby('name')
 g = gg.get_group('فولاد')
 g['LimitGroup'] = g.LimitGroup.fillna(method = 'ffill')
+g['PriceMaxLimit2'] = round(g.YesterdayPrice * (1+g.LimitGroup/100))
+# g.loc[g.PriceMaxLimit2>10000,'PriceMaxLimit2'] = round(g.loc[g.PriceMaxLimit2>10000]/100) 
 
 g[['date','close_price','YesterdayPrice','Limit',
- 'LimitGroup','PriceMaxLimit']]
+ 'LimitGroup','PriceMaxLimit','PriceMaxLimit2','max_price']]
 # %%
 data = data.dropna()
 len(data)
