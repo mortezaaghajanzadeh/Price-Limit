@@ -215,7 +215,7 @@ pdf = pdf.drop(pdf[(pdf.name == "اتکای") & (pdf.close_price == 1000)].index
 pdf = pdf.drop_duplicates()
 
 pdf.jalaliDate = pdf.jalaliDate.apply(vv)
-
+pdf = pdf[pdf.max_price>0]
 
 # %%
 pdf = pdf[
@@ -276,12 +276,14 @@ pdf["date"] = pdf.date.astype(int)
 pdf = pdf[pdf.date >= df.date.min()]
 df["jalaliDate"] = df["jalaliDate"].apply(vv)
 df["jalaliDate"] = df["jalaliDate"].astype(int)
-
+df = df.drop(columns = ['close_price'])
 
 # %%
 
 data = (
-    df.merge(pdf, on=["name", "jalaliDate", "date", "group_name"], how="right")
+    df.merge(pdf, 
+             on=["name", "jalaliDate", "date", "group_name"],
+             how="right")
 ).sort_values(by=["name", "date"])
 #%%
 data = data.drop(data[data.volume == 0].index)
@@ -305,7 +307,9 @@ data["TomorrowClosePrice"] = gg["close_price"].shift(periods=-1)
 data["TomorrowLastPrice"] = gg["last_price"].shift(periods=-1)
 data["TomorrowOpenPrice"] = gg["open_price"].shift(periods=-1)
 
-data["Limit"] = (data["PriceMaxLimit"].divide(data["YesterdayPrice"]) - 1) * 100
+data["Limit"] = (
+    data["PriceMaxLimit"] /(data["PriceMaxLimit"] + data["PriceMinLimit"])*2  - 1
+    ) * 100
 
 
 data["Limit"] = data["Limit"].round(2)
@@ -319,9 +323,12 @@ data.loc[(abs(data["Limit"]) > 10), "LimitGroup"] = 0
 
 
 # %%
-len(data)
+gg = data.groupby('name')
+g = gg.get_group('فولاد')
+g['LimitGroup'] = g.LimitGroup.fillna(method = 'ffill')
 
-
+g[['date','close_price','YesterdayPrice','Limit',
+ 'LimitGroup','PriceMaxLimit']]
 # %%
 data = data.dropna()
 len(data)
