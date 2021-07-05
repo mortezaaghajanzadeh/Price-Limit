@@ -206,7 +206,7 @@ df = df.drop(
 )
 df = df.drop(df[df["name"].isin(symbols)].index)
 df = df.drop(df[df.group_name == "صندوق سرمایه گذاری قابل معامله"].index)
-df = df.drop(df[(df.name == 'اتکای')&(df.close_price == 1000)].index)
+df = df.drop(df[(df.name == "اتکای") & (df.close_price == 1000)].index)
 df = df.drop_duplicates()
 
 
